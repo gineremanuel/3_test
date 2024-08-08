@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fourth Test</title>
+</head>
+<body>
+  <main>
+  </main>
+  <script type="module">
+    const MyArray = ["Pedro", "Juan", "Violeta", "Amapola"],
+      d = document,
+      $fragment = d.createDocumentFragment(),
+      $main = d.querySelector('main');
+    
+    MyArray.forEach(name => {
+      const $fieldName = d.createElement('p');
+      $fragment.appendChild($fieldName)
+      $fieldName.innerHTML = name;
+    })
+    $main.appendChild($fragment)
+  </script>
+</body>
+</html>
